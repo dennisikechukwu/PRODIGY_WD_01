@@ -5,22 +5,72 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: radial-gradient(#1e1b4b 60%, #0f172a 100%);
+    --foreground: #f1f5f9;
   }
 }
 
+@media (max-width: 767px) {
+  :root {
+    --background: radial-gradient( #1e1b4b 70%, #0f172a 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --background: radial-gradient( #1e1b4b 75%, #0f172a 100%);
+  }
+}
+
+
 body {
-  background: var(--background);
+  background: var(--background), radial-gradient(ellipse, rgba(147, 51, 234, 0.5), transparent 70%);
+  /*background-repeat: repeat;*/
+  /*background-attachment: fixed;*/
+  background-size: cover;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
 }
+
+/* Optional: Add some stars for more realism */
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ 
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.border--purple:hover{
+    border-color: #9333ea4d ;
+    transition: all 4s ease-in-out;
+}
+
+.text--white{
+  color: #e8dede;
+}
+
+.text--white:hover{
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.no-scrollbar {
+  overflow: auto;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
