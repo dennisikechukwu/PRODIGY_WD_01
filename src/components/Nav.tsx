@@ -59,7 +59,7 @@ const Nav = () => {
                 <div className='flex justify-center p-5'>
                 <div
                     key={open ? "open" : "closed"} // Forces fresh render
-                    className="lg:hidden  border border-[#2e467e]  flex flex-col justify-center gap-3 bg-[#151414] p-4 rounded-lg text-left fixed w-[90%]   z-10"
+                    className="lg:hidden  border border-[#7f8491]  flex flex-col justify-center gap-3 bg-[#151414] p-4 rounded-lg text-left fixed w-[90%]   z-10"
                 >
                     {[
                         { name: "About", href: "/#about" },
